@@ -1,0 +1,20 @@
+{
+  "name": "back_end_chat",
+  "version": "1.0.0",
+  "description": "back do chat",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "flutter_char_nodejs"
+  ],
+  "author": "Higino",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
+    "morgan": "^1.10.0"
+  }
+}
