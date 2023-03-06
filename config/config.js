@@ -16,7 +16,7 @@ const databaseConfig = {
     'port'    : '5432',
     'database': 'chat_db',
     'user'    : 'postgres',
-    'password': ''
+    'password': '8225luiz'
 };
 
 const db = pgp(databaseConfig);
