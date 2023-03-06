@@ -6,6 +6,9 @@ const cors = require('cors');
 const logger = require('morgan');
 
 
+const users = require('./routes/users_routes');
+
+
 const port = process.env.PORT || 3000;
 app.use(logger('dev'));
 app.use(express.json());
@@ -18,19 +21,21 @@ app.disable('x-powered-by');
 
 app.set('port', port);
 
+//Chamando as rotas
+users(app)
+
 server.listen(3000, '192.168.43.135' || 'localhost', function(){
     console.log('Aplicacao de nodejs' + port + 'Inciada...')
 });
 
-app.get('/', (req, res) => {
-    res.send('Rota raiz do back_end')
-});
 
-app.get('/test', (req, res) => {
-    res.send('Rota Test')
-});
 
 app.use((err, req, res, next) => {
     console.log(err);
     res.status(err.status || 500).send(err.stack)
 })
+
+module.exports = {
+    app: app, 
+    server: server
+}
