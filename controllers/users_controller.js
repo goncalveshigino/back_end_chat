@@ -39,6 +39,35 @@ module.exports = {
             });
             
         }
+    },
+
+
+    async singnIn(req,res,next){
+
+        try {
+
+            const { email, password } = req.body;
+
+            const myUser = await User.findByEmail(email);
+
+            if(!myUser){
+                return res.status(401).json({
+                    success:false,
+                    message: 'Email nao foi encontrado'
+                })
+            }
+            
+        } catch (error) {
+
+            console.log(`Error: ${error}`);
+            return res.status(501).json({
+              success: false, 
+              message: 'Erro no login do usuario', 
+              error: error
+            });
+            
+        }
+
     }
 
 }

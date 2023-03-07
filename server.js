@@ -4,6 +4,7 @@ const http = require('http');
 const server = http.createServer(app);
 const cors = require('cors');
 const logger = require('morgan');
+const passport = require('passport');
 
 
 const users = require('./routes/users_routes');
@@ -15,7 +16,12 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true
 }));
+
 app.use(cors());
+app.use(passport.initialize());
+app.user(passport.session());
+
+require('./config/passport')(passport);
 
 app.disable('x-powered-by');
 

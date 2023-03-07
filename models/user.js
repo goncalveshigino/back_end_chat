@@ -45,4 +45,45 @@ User.createUser = async (user) => {
 }
 
 
+User.findById  = (id, callback) => {
+    const sql = `
+      
+    SELECT
+        id,
+        emial,
+        firstname,
+        lastname,
+        phone,
+        password,
+        session_token
+    FROM 
+        users 
+    WHERE id = $1
+    `;
+
+    return db.oneOrNone(sql, id).then(user => {callback(null, user)})
+}
+
+User.findByEmail = (email) => {
+
+    const sql = `
+      
+    SELECT
+        id,
+        emial,
+        firstname,
+        lastname,
+        phone,
+        password,
+        session_token
+    FROM 
+        users 
+    WHERE email = $1
+    `;
+
+    return db.oneOrNone(sql, email);
+
+}
+
+
 module.exports = User;

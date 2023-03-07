@@ -13,3 +13,13 @@ CREATE TABLE users(
    updated_at TIMESTAMP(0) NOT NULL
 
 );
+
+SELECT
+   id,
+   emial,
+   firstname,
+   lastname,
+   phone,
+   password,
+   session_token
+   FROM users WHERE id = 1
