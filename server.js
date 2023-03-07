@@ -18,8 +18,9 @@ app.use(express.urlencoded({
 }));
 
 app.use(cors());
+
 app.use(passport.initialize());
-app.user(passport.session());
+app.use(passport.session());
 
 require('./config/passport')(passport);
 

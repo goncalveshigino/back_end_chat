@@ -1,3 +1,3 @@
 module.exports = {
-    secretOrKey: '/A?D(G+KbPeShVkYp3s6v9y$B&E)H@McQfTjWnZq4t7w!z%C*F-JaNdRgUkXp2s5'
+    secretOrKey: 'ShVmYq3t6w9z$B&E)H@McQfTjWnZr4u7x!A%D*F-JaNdRgUkXp2s5v8y/B?E(H+K'
 }

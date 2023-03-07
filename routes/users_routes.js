@@ -7,4 +7,8 @@ module.exports = (app) =>{
 
     app.post('/api/users/createUser', UsersController.createUser);
 
+    app.post('/api/users/singnIn', UsersController.singnIn);
+
+
+
 }

@@ -50,7 +50,7 @@ User.findById  = (id, callback) => {
       
     SELECT
         id,
-        emial,
+        email,
         firstname,
         lastname,
         phone,
@@ -70,7 +70,7 @@ User.findByEmail = (email) => {
       
     SELECT
         id,
-        emial,
+        email,
         firstname,
         lastname,
         phone,
